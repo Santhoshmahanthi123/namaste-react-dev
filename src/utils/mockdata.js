@@ -1,4 +1,4 @@
-const resList = [
+export const resList = [
   {
     id: "11091",
     name: "Pizza Hut",
@@ -654,63 +654,61 @@ const resList = [
     },
   },
   {
-    info: {
-      id: "68324",
-      name: "Sweet Truth - Cake and Desserts",
-      cloudinaryImageId:
-        "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/2/d0864aaf-cfa7-4ebb-ab2e-fae761ab9822_68324.JPG",
-      locality: "Ground floor, Mehdipatnam (Behind Mina Hospital)",
-      areaName: "Humayun Nagar",
-      costForTwo: "₹450 for two",
-      cuisines: ["Snacks", "Bakery", "Desserts", "Beverages"],
-      avgRating: 4,
-      parentId: "4444",
-      avgRatingString: "4.0",
-      totalRatingsString: "1K+",
-      sla: {
-        deliveryTime: 31,
-        lastMileTravel: 2.9,
-        serviceability: "SERVICEABLE",
-        slaString: "30-35 mins",
-        lastMileTravelString: "2.9 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-07-09 23:59:00",
-        opened: true,
-      },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textBased: {},
-          textExtendedBadges: {},
-        },
-      },
-      aggregatedDiscountInfoV3: {
-        header: "50% OFF",
-        subHeader: "UPTO ₹100",
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-      externalRatings: {
-        aggregatedRating: {
-          rating: "--",
-        },
-      },
-      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    id: "68324",
+    name: "Sweet Truth - Cake and Desserts",
+    cloudinaryImageId:
+      "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/2/d0864aaf-cfa7-4ebb-ab2e-fae761ab9822_68324.JPG",
+    locality: "Ground floor, Mehdipatnam (Behind Mina Hospital)",
+    areaName: "Humayun Nagar",
+    costForTwo: "₹450 for two",
+    cuisines: ["Snacks", "Bakery", "Desserts", "Beverages"],
+    avgRating: 4,
+    parentId: "4444",
+    avgRatingString: "4.0",
+    totalRatingsString: "1K+",
+    sla: {
+      deliveryTime: 31,
+      lastMileTravel: 2.9,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "2.9 km",
+      iconType: "ICON_TYPE_EMPTY",
     },
+    availability: {
+      nextCloseTime: "2024-07-09 23:59:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "50% OFF",
+      subHeader: "UPTO ₹100",
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "--",
+      },
+    },
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
   },
   {
     id: "156138",
@@ -794,5 +792,3 @@ const resList = [
     },
   },
 ];
-
-export default resList;
