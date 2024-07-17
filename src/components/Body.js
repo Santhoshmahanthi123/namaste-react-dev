@@ -1,9 +1,6 @@
-import resList from "../utils/mockdata";
 import Restaurantcard from "./RestaurantCard";
-import resList from "../utils/mockdata";
 import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
-import { resList } from "../utils/mockdata";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   useEffect(() => {
