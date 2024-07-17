@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import { resList } from "../utils/mockdata";
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
