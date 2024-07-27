@@ -1,6 +1,8 @@
 import Restaurantcard from "./RestaurantCard";
 import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   useEffect(() => {
@@ -19,6 +21,14 @@ const Body = () => {
     setListOfRestaurants(res);
     console.log(res);
   };
+
+  if (listOfRestaurants.length === 0) {
+    return (
+      <Box sx={{ display: "flex" }}>
+        <CircularProgress />
+      </Box>
+    );
+  }
 
   return (
     <div className="body">
