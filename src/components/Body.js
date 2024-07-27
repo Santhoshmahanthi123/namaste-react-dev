@@ -23,11 +23,10 @@ const Body = () => {
     console.log(res);
   };
 
-  if (listOfRestaurants.length === 0) {
-    return <Shimmer />;
-  }
-
-  return (
+  // conditional rendering using ternery operator
+  return listOfRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <Button
