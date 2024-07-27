@@ -57,3 +57,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.login {
+  padding: 0 20px;
+}

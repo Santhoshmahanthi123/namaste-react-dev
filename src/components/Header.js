@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
+import Button from "@mui/material/Button";
 export const Header = () => {
+  const [btnName, setBtnName] = useState("Login");
   return (
     <div className="header">
       <div className="logo-container">
@@ -11,6 +14,15 @@ export const Header = () => {
           <li>About Us</li>
           <li>Contact Us</li>
           <li>Cart</li>
+          <Button
+            variant="contained"
+            onClick={() => {
+              setBtnName("Logout");
+            }}
+            className="login"
+          >
+            {btnName}
+          </Button>
         </ul>
       </div>
     </div>
