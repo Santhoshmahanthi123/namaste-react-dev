@@ -17,7 +17,7 @@ export const Header = () => {
           <Button
             variant="contained"
             onClick={() => {
-              setBtnName("Logout");
+              btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}
             className="login"
           >
