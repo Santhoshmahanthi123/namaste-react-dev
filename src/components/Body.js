@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
+import Shimmer from "./Shimmer";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   useEffect(() => {
@@ -23,11 +24,7 @@ const Body = () => {
   };
 
   if (listOfRestaurants.length === 0) {
-    return (
-      <Box sx={{ display: "flex" }}>
-        <CircularProgress />
-      </Box>
-    );
+    return <Shimmer />;
   }
 
   return (
