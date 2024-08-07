@@ -7,7 +7,9 @@ import Box from "@mui/material/Box";
 import Shimmer from "./Shimmer";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
-
+import Grid from "@mui/material/Grid";
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -21,6 +23,14 @@ const Search = styled("div")(({ theme }) => ({
     marginLeft: theme.spacing(1),
     width: "auto",
   },
+}));
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -62,6 +72,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+    console.log("data", json);
     //optional chaining
     let res =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
@@ -123,11 +134,20 @@ const Body = () => {
           </Button>
         </div>
       </div>
-      <div className="res-container">
+
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={3}
+      >
         {filteredRestaurant.map((restaurant) => (
-          <Restaurantcard key={restaurant.id} resData={restaurant} />
+          <Grid item xs={4} p={2} sm={2} md={2} key={restaurant.id}>
+            <Restaurantcard key={restaurant.id} resData={restaurant} />
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </div>
   );
 };
