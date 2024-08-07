@@ -2,14 +2,13 @@ import Restaurantcard from "./RestaurantCard";
 import { Button } from "@mui/material";
 import { styled, alpha } from "@mui/material/styles";
 import { useEffect, useState } from "react";
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
 import Shimmer from "./Shimmer";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import { Link } from "react-router-dom";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -69,6 +68,7 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
     res = res.map((restaurant) => restaurant.info);
+    console.log(res);
     setListOfRestaurants(res);
     setFilteredRestairant(res);
   };
@@ -105,6 +105,7 @@ const Body = () => {
                   .includes(searchText.toLocaleLowerCase())
               );
               setFilteredRestairant(filteredRestaurant);
+              console.log("###", filteredRestaurant);
               // filteredRestaurant = setListOfRestaurants(listOfRestaurants);
             }}
             className="filter-btn"
@@ -135,7 +136,9 @@ const Body = () => {
       >
         {filteredRestaurant.map((restaurant) => (
           <Grid item xs={4} p={2} sm={2} md={2} key={restaurant.id}>
-            <Restaurantcard key={restaurant.id} resData={restaurant} />
+            <Link to={"/restaurants/" + restaurant.id}>
+              <Restaurantcard key={restaurant.id} resData={restaurant} />
+            </Link>
           </Grid>
         ))}
       </Grid>

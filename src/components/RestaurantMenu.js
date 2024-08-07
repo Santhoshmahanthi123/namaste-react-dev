@@ -29,7 +29,7 @@ const RestaurantMenu = () => {
   const itemCards = groupedCard
     ? groupedCard[2]?.card?.card?.categories[0]?.itemCards
     : undefined;
-  console.log(itemCards); // Log itemCards to see if it is still undefined
+  console.log("items", itemCards); // Log itemCards to see if it is still undefined
   return (
     <div className="menu">
       <h1>{name}</h1>
@@ -37,7 +37,8 @@ const RestaurantMenu = () => {
       <ul>
         {itemCards.map((item) => (
           <li key={item.card.info.id}>
-            {item.card.info.name} - Rs {item.card.info.price / 100}
+            {item.card.info.name} - Rs{" "}
+            {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
           </li>
         ))}
       </ul>
