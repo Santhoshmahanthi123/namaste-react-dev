@@ -31,6 +31,7 @@ const RestaurantCard = (props) => {
               <Typography>{avgRating} stars</Typography>
               <Typography>{costForTwo}</Typography>
               <Typography>{deliveryTime} minutes </Typography>
+              <Typography>{deliveryTime} minutes </Typography>
             </CardContent>
             <CardActions>
               <Button size="small">Share</Button>
