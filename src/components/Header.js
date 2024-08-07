@@ -7,7 +7,9 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} alt="logo"></img>
+        <Link to="/">
+          <img className="logo" src={LOGO_URL} alt="logo"></img>
+        </Link>
       </div>
       <div className="nav-items">
         <ul>
@@ -21,15 +23,19 @@ export const Header = () => {
             <Link to="/contact">Contact Us</Link>
           </li>
           <li>Cart</li>
-          <Button
-            variant="contained"
-            onClick={() => {
-              btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
-            }}
-            className="login"
-          >
-            {btnName}
-          </Button>
+          <Link to="/login">
+            <Button
+              variant="contained"
+              onClick={() => {
+                btnName === "Login"
+                  ? setBtnName("Logout")
+                  : setBtnName("Login");
+              }}
+              className="login"
+            >
+              {btnName}
+            </Button>
+          </Link>
         </ul>
       </div>
     </div>
