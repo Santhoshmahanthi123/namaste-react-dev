@@ -16,7 +16,7 @@ const Shimmer = () => {
     >
       {Array.from(Array(18)).map((_, index) => (
         <Grid item xs={2} sm={4} md={2} key={index}>
-          <Card sx={{ maxWidth: 345 }}>
+          <Card style={{ backgroundColor: "paper" }} sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia sx={{ height: 140 }} image="name" />
               <CardContent>

@@ -14,10 +14,11 @@ const RestaurantCard = (props) => {
   const { resData } = props;
   const { name, cuisines, avgRating, costForTwo } = resData;
   const { deliveryTime } = resData?.sla;
+
   return (
     <Grid container wrap="nowrap" spacing={2} columns={16}>
       <Grid item xs zeroMinWidth>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card style={{ backgroundColor: "skyblue" }} sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
               sx={{ height: 140 }}
@@ -25,6 +26,7 @@ const RestaurantCard = (props) => {
               title={name}
             />
             <CardContent>
+              <Typography noWrap>{name} </Typography>
               <Typography noWrap>{cuisines.join(",")} </Typography>
               <Typography>{avgRating} stars</Typography>
               <Typography>{costForTwo}</Typography>
